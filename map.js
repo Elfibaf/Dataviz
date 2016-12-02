@@ -357,9 +357,6 @@ $(function () {
         title: {
             text: 'Time used by countries'
         },
-        subtitle: {
-            text: 'Demo of drawing all areas in the map, only highlighting partial data'
-        },
         legend: {
             enabled: false
         },
@@ -385,7 +382,7 @@ $(function () {
                                     }
                                 },
                                 legend : {
-                                    align: 'right',
+                                    align: 'left',
                                     verticalAlign: 'top',
                                     layout: 'vertical',
                                     itemMarginTop: 10,
@@ -449,7 +446,7 @@ $(function () {
             }
         },
         legend : {
-            align: 'right',
+            align: 'left',
             verticalAlign: 'top',
             layout: 'vertical',
             itemMarginTop: 10,
@@ -476,7 +473,7 @@ $(function () {
                         for (var i = 0; i<points.length; i=i+1) {
                             if (points[i].localName === "path") {
                                 if (points[i].point.visible) {
-                                points[i].point.setVisible(false);
+                                    points[i].point.setVisible(false);
                                 }
                                 else {
                                     points[i].point.setVisible(true);
