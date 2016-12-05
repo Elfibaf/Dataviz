@@ -308,6 +308,12 @@ function creerPies(data_pie, map) {
            if (p['hc-key'] === elem.id) {
                 res.push({
                     type: 'pie',
+                    events : {
+                        mouseOver : function(event) {
+                            console.log(this);
+                            this.group.toFront();
+                        }    
+                    },
                     name: p.name+' : Time spent',
                     id: elem.id,
                     data: elem.data,
