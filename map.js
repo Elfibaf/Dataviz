@@ -308,6 +308,12 @@ function creerPies(data_pie, map) {
            if (p['hc-key'] === elem.id) {
                 res.push({
                     type: 'pie',
+                    events : {
+                        mouseOver : function(event) {
+                            console.log(this);
+                            this.group.toFront();
+                        }    
+                    },
                     name: p.name+' : Time spent',
                     id: elem.id,
                     data: elem.data,
@@ -398,7 +404,7 @@ $(function () {
                                     column: {
                                         stacking: 'normal'
                                     },
-                                    series : {
+                                    /*series : {
                                         events : {
                                             legendItemClick: function (event) {
                                                 var color = this.color;
@@ -417,7 +423,7 @@ $(function () {
                                                 }
                                             }
                                         }
-                                    }
+                                    }*/
                                 },
                                 series: creerBars(data_bar, event.point)
                             })
@@ -463,7 +469,7 @@ $(function () {
                 stacking: 'normal',
                 
             },
-            series: {
+            /*series: {
                 events : {
                     legendItemClick: function (event) {
                         var color = this.color;
@@ -482,7 +488,7 @@ $(function () {
                         }
                     }
                 }
-            }
+            }*/
             
         },
         series: [{
