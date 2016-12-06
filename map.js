@@ -404,7 +404,7 @@ $(function () {
                                     column: {
                                         stacking: 'normal'
                                     },
-                                    /*series : {
+                                    series : {
                                         events : {
                                             legendItemClick: function (event) {
                                                 var color = this.color;
@@ -423,7 +423,7 @@ $(function () {
                                                 }
                                             }
                                         }
-                                    }*/
+                                    }
                                 },
                                 series: creerBars(data_bar, event.point)
                             })
@@ -469,7 +469,7 @@ $(function () {
                 stacking: 'normal',
                 
             },
-            /*series: {
+            series: {
                 events : {
                     legendItemClick: function (event) {
                         var color = this.color;
@@ -488,7 +488,7 @@ $(function () {
                         }
                     }
                 }
-            }*/
+            }
             
         },
         series: [{
